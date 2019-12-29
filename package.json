@@ -1,0 +1,25 @@
+{
+  "name": "nextjs-contentful-blog",
+  "version": "0.0.1",
+  "description": "Nextjs blog starter",
+  "author": "Sarbast Mohammed",
+  "license": "MIT",
+  "engines": [
+    "12.x",
+    "10.x"
+  ],
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "contentful": "^7.11.3",
+    "highlight.js": "^9.17.1",
+    "marked": "^0.8.0",
+    "next": "^9.1.5-canary.15",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "reading-time": "^1.2.0"
+  }
+}

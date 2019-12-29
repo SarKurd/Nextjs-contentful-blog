@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [{ "use": "@now/next@canary", "src": "package.json" }],
+  "build": {
+    "env": {
+      "CONTENTFUL_SPACE_ID": "@contentful_space_id",
+      "CONTENTFUL_ACCESS_TOKEN": "@contentful_access_token"
+    }
+  }
+}
