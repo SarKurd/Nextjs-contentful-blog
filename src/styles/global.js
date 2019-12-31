@@ -53,6 +53,7 @@ export default css.global`
   }
 
   p > img {
+    width: 100%;
     display: flex;
     margin: 0 auto;
   }
