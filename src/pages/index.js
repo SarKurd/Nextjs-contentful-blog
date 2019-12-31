@@ -6,11 +6,13 @@ const index = () => {
       <div className="author-info">
         <div className="avatar">
           <div className="avatar-container">
-            <img src="/grendizer.png" />
+            <img src="/grendizer.jpg" alt="grendizer" />
           </div>
         </div>
-        <h1>SARBAST MOHAMMED</h1>
-        <p>Software Engineer</p>
+        <div className="description">
+          <h1>SARBAST MOHAMMED</h1>
+          <p>Software Engineer</p>
+        </div>
       </div>
       <style jsx>
         {`
@@ -22,11 +24,17 @@ const index = () => {
             align-items: center;
           }
 
-          .author-info > h1 {
-            margin-bottom: 0;
+          .description > h1,
+          .description > p {
+            margin: 0;
+            text-align: center;
           }
-          .author-info > p {
-            margin-top: 0;
+
+          @media (min-width: 600px) {
+            .description > h1,
+            .description > p {
+              text-align: left;
+            }
           }
 
           .avatar {
@@ -40,7 +48,7 @@ const index = () => {
             position: relative;
             overflow: hidden;
             border-radius: 50%;
-            margin: 0 auto;
+            margin: 0 auto 10px auto;
           }
 
           img {
