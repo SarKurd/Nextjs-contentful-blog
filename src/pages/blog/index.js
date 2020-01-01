@@ -34,7 +34,7 @@ const index = ({ posts }) => {
 
           return (
             <div className="post" key={post.sys.id}>
-              <Link href="blog/[slug]" as={`blog/${post.fields.slug}`}>
+              <Link href="/blog/[slug]" as={`/blog/${post.fields.slug}`}>
                 <a>
                   <h2 className="post-title">{post.fields.title}</h2>
                 </a>

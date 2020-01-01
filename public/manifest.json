@@ -1,0 +1,16 @@
+{
+  "name": "Nextjs contentful blog",
+  "short_name": "nextjs-blog",
+  "description": "Nextjs blog using contentful",
+  "icons": [
+    {
+      "src": "/pwa.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "start_url": "/",
+  "display": "standalone"
+}
