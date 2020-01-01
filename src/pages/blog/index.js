@@ -21,11 +21,8 @@ const index = ({ posts }) => {
   return (
     <div className="blog">
       <Head>
-        <title>{'A blog by Sarbast Mohammed'}</title>
-        <meta
-          name="description"
-          content={'Personal blog by Sarbast Mohammed'}
-        />
+        <title>{'A blog by Grendizer'}</title>
+        <meta name="description" content={'UFO Robot Grendizer'} />
       </Head>
       <h1>Blog</h1>
       {posts.length > 0 ? (

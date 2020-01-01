@@ -10,8 +10,8 @@ const index = () => {
           </div>
         </div>
         <div className="description">
-          <h1>SARBAST MOHAMMED</h1>
-          <p>Software Engineer</p>
+          <h1>Grendizer</h1>
+          <p>UFO Robot</p>
         </div>
       </div>
       <style jsx>
@@ -28,13 +28,6 @@ const index = () => {
           .description > p {
             margin: 0;
             text-align: center;
-          }
-
-          @media (min-width: 600px) {
-            .description > h1,
-            .description > p {
-              text-align: left;
-            }
           }
 
           .avatar {

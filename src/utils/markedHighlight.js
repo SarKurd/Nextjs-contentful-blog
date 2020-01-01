@@ -1,5 +1,16 @@
 import marked, { Renderer } from 'marked';
-import highlightjs from 'highlight.js';
+import highlightjs from 'highlight.js/lib/highlight';
+import javascript from 'highlight.js/lib/languages/javascript';
+import html from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+import bash from 'highlight.js/lib/languages/bash';
+import json from 'highlight.js/lib/languages/json';
+
+highlightjs.registerLanguage('javascript', javascript);
+highlightjs.registerLanguage('html', html);
+highlightjs.registerLanguage('css', css);
+highlightjs.registerLanguage('bash', bash);
+highlightjs.registerLanguage('json', json);
 
 const escapeMap = {
   '&': '&amp;',
