@@ -6,16 +6,24 @@ module.exports = withOffline({
     ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
   },
   workboxOpts: {
-    swDest: 'static/service-worker.js'
-  },
-  experimental: {
-    async rewrites() {
-      return [
-        {
-          source: '/service-worker.js',
-          destination: '/_next/static/service-worker.js'
+    swDest: '/service-worker.js',
+    globPatterns: ['static/**/*'],
+    globDirectory: '.',
+    modifyURLPrefix: {
+      'static/': '_next/static/',
+      'public/': '/'
+    },
+    runtimeCaching: [
+      {
+        urlPattern: /^https?.*/,
+        handler: 'NetworkFirst',
+        options: {
+          cacheName: 'offlineCache',
+          expiration: {
+            maxEntries: 200
+          }
         }
-      ];
-    }
+      }
+    ]
   }
 });
