@@ -1,5 +1,9 @@
 # Nextjs, Contentful blog
 
+![lighthouse score](https://i.imgur.com/18j1D9Y.png)
+
+
+
 ## Usage
 
 ### If you are deploying to `Now`
