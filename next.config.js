@@ -6,13 +6,7 @@ module.exports = withOffline({
     ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN
   },
   workboxOpts: {
-    swDest: '/service-worker.js',
-    globPatterns: ['static/**/*'],
-    globDirectory: '.',
-    modifyURLPrefix: {
-      'static/': '_next/static/',
-      'public/': '/'
-    },
+    swDest: 'static/service-worker.js',
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
@@ -25,5 +19,15 @@ module.exports = withOffline({
         }
       }
     ]
+  },
+  experimental: {
+    async rewrites() {
+      return [
+        {
+          source: '/service-worker.js',
+          destination: '/_next/static/service-worker.js'
+        }
+      ];
+    }
   }
 });
